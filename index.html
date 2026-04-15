@@ -163,8 +163,8 @@
 
     <section class="hero-section">
         <h1>Prachi ❤️</h1>
-        <div class="subtext"><span class="typing-text">mujhe nahi pata aap mujhse kitni naraz ho…
-par main aaj bhi wahi hu, jis par aap kabhi bahut vishwas karti thi 💖</span></div>
+        <div class="subtext"><span class="typing-text">mujhe nahi pata aap mujhse kitni naraz ho…<br>
+par main aaj bhi wahi hu, jis par<br>aap kabhi bahut vishwas karti thi 💖</span></div>
     </section>
 
     <section class="photo-section">
@@ -248,7 +248,7 @@ par main aaj bhi wahi hu, jis par aap kabhi bahut vishwas karti thi 💖</span><
     <div class="music-player">
         <button class="music-btn" id="musicBtn">🎵</button>
         <audio id="bgMusic" loop>
-            <!-- <source src="romantic-song.mp3" type="audio/mpeg"> -->
+            <source src="mees.mp3" type="audio/mpeg">
         </audio>
     </div>
 
@@ -256,7 +256,7 @@ par main aaj bhi wahi hu, jis par aap kabhi bahut vishwas karti thi 💖</span><
         const FORMSPREE_ID = 'mvzdzaev';
         
         const heartsContainer = document.getElementById('heartsContainer');
-        const heartEmojis = ['❤️', '💕', '💖', '💗', '💝', '💓',"Prachi","Kishan"];
+        const heartEmojis = ["Prachi",'❤️', '💕',"Prachi", '💖', '💗', '💝', '💓',"Prachi","Kishan"];
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -321,7 +321,7 @@ par main aaj bhi wahi hu, jis par aap kabhi bahut vishwas karti thi 💖</span><
         noModal.addEventListener('click', (e) => { if (e.target === noModal) noModal.classList.remove('show'); });
 
         function createMegaHeartBurst() {
-            const burstEmojis = ['❤️', '💕', '💖', '💗', '💝', '💓', '💘', '💞',"Prachi","Kishan"];
+            const burstEmojis = ['❤️', '💕',"Prachi",'💖', '💗',"Prachi", '💝', '💓', '💘', '💞',"Prachi","Kishan"];
             for (let i = 0; i < 50; i++) {
                 setTimeout(() => {
                     const heart = document.createElement('div');

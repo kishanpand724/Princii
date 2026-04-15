@@ -6,616 +6,205 @@
     <title>For Prachi ❤️</title>
     <style>
         /* ========== GLOBAL STYLES ========== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #ffeef8 0%, #e6e6fa 100%);
-            color: #333;
-            overflow-x: hidden;
+            color: #333; overflow-x: hidden;
         }
-
-        /* ========== FLOATING HEARTS BACKGROUND ========== */
         .hearts-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 0; overflow: hidden;
         }
-
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            color: #ff69b4;
-            animation: floatHeart 8s infinite ease-in-out;
-            opacity: 0.6;
-        }
-
+        .heart { position: absolute; font-size: 20px; color: #ff69b4;
+            animation: floatHeart 8s infinite ease-in-out; opacity: 0.6; }
         @keyframes floatHeart {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            50% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-20vh) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
         }
-
-        /* ========== HERO SECTION ========== */
         .hero-section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
+            min-height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            padding: 20px; position: relative; z-index: 1;
         }
-
         .hero-section h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            color: #ff1493;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 10px rgba(255, 20, 147, 0.3);
+            font-size: clamp(2.5rem, 8vw, 5rem); color: #ff1493;
+            margin-bottom: 20px; text-shadow: 2px 2px 10px rgba(255, 20, 147, 0.3);
             animation: fadeInDown 1s ease;
         }
-
-        .hero-section .subtext {
-            font-size: clamp(1.2rem, 4vw, 2rem);
-            color: #8b4789;
-            margin-bottom: 30px;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-
+        .hero-section .subtext { font-size: clamp(1.2rem, 4vw, 2rem); color: #8b4789;
+            margin-bottom: 30px; max-width: 600px; line-height: 1.6; }
         .typing-text {
-            border-right: 3px solid #ff1493;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            animation: typing 3.5s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
+            border-right: 3px solid #ff1493; white-space: nowrap; overflow: hidden;
+            display: inline-block; animation: typing 3.5s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
         }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ========== PHOTO SECTION ========== */
-        .photo-section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px;
-            position: relative;
-            z-index: 1;
-        }
-
+        @keyframes typing { from { width: 0; } to { width: 100%; } }
+        @keyframes blink { 50% { border-color: transparent; } }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+        .photo-section { min-height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; padding: 50px 20px;
+            position: relative; z-index: 1; }
         .photo-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            padding: 30px;
-            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.3);
-            max-width: 500px;
-            width: 100%;
-            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);
+            border-radius: 30px; padding: 30px; box-shadow: 0 8px 32px rgba(255, 105, 180, 0.3);
+            max-width: 500px; width: 100%; transition: all 0.4s ease;
             border: 2px solid rgba(255, 255, 255, 0.5);
         }
-
-        .photo-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 50px rgba(255, 105, 180, 0.5);
-            border-color: #ff69b4;
-        }
-
-        .photo-container {
-            width: 100%;
-            height: 400px;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 20px;
+        .photo-card:hover { transform: scale(1.05); box-shadow: 0 15px 50px rgba(255, 105, 180, 0.5); border-color: #ff69b4; }
+        .photo-container { width: 100%; height: 400px; border-radius: 20px; overflow: hidden; margin-bottom: 20px;
             background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 3rem;
-            color: rgba(255, 255, 255, 0.7);
+            display: flex; justify-content: center; align-items: center; font-size: 3rem; color: rgba(255, 255, 255, 0.7);
         }
-
-        .photo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .photo-caption {
-            text-align: center;
-            font-size: 1.5rem;
-            color: #ff1493;
-            font-weight: 600;
-        }
-
-        /* ========== MEMORY SECTION ========== */
-        .memory-section {
-            min-height: 100vh;
-            padding: 80px 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            color: #ff1493;
-            margin-bottom: 50px;
-            text-shadow: 2px 2px 8px rgba(255, 20, 147, 0.2);
-        }
-
+        .photo-container img { width: 100%; height: 100%; object-fit: cover; }
+        .photo-caption { text-align: center; font-size: 1.5rem; color: #ff1493; font-weight: 600; }
+        .memory-section { min-height: 100vh; padding: 80px 20px; position: relative; z-index: 1; }
+        .section-title { text-align: center; font-size: clamp(2rem, 6vw, 3.5rem); color: #ff1493;
+            margin-bottom: 50px; text-shadow: 2px 2px 8px rgba(255, 20, 147, 0.2); }
         .memory-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; max-width: 1200px; margin: 0 auto;
         }
-
         .memory-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.2);
-            text-align: center;
-            font-size: 1.3rem;
-            color: #8b4789;
-            line-height: 1.6;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease;
-            border: 2px solid transparent;
+            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
+            padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(255, 105, 180, 0.2);
+            text-align: center; font-size: 1.3rem; color: #8b4789; line-height: 1.6;
+            opacity: 0; transform: translateY(50px); transition: all 0.6s ease; border: 2px solid transparent;
         }
-
-        .memory-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .memory-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 35px rgba(255, 105, 180, 0.4);
-            border-color: #ffb6c1;
-        }
-
-        .memory-card::before {
-            content: "💕";
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        /* ========== MESSAGE FORM SECTION ========== */
-        .form-section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px;
-            position: relative;
-            z-index: 1;
-        }
-
+        .memory-card.visible { opacity: 1; transform: translateY(0); }
+        .memory-card:hover { transform: translateY(-10px); box-shadow: 0 10px 35px rgba(255, 105, 180, 0.4); border-color: #ffb6c1; }
+        .memory-card::before { content: "💕"; font-size: 2rem; display: block; margin-bottom: 15px; }
+        .form-section { min-height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; padding: 80px 20px;
+            position: relative; z-index: 1; }
         .form-container {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(15px);
-            padding: 50px 40px;
-            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(15px);
+            padding: 50px 40px; border-radius: 30px;
             box-shadow: 0 10px 40px rgba(255, 105, 180, 0.3);
-            max-width: 600px;
-            width: 100%;
-            border: 2px solid rgba(255, 182, 193, 0.5);
+            max-width: 600px; width: 100%; border: 2px solid rgba(255, 182, 193, 0.5);
         }
-
-        .form-container h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #ff1493;
-            margin-bottom: 15px;
-        }
-
-        .form-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #8b4789;
-            margin-bottom: 35px;
-            font-style: italic;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            color: #8b4789;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
+        .form-container h2 { text-align: center; font-size: 2.5rem; color: #ff1493; margin-bottom: 15px; }
+        .form-subtitle { text-align: center; font-size: 1.1rem; color: #8b4789; margin-bottom: 35px; font-style: italic; }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; margin-bottom: 10px; color: #8b4789; font-weight: 600; font-size: 1.1rem; }
         .form-group textarea {
-            width: 100%;
-            padding: 18px 22px;
-            border: 2px solid #ffb6c1;
-            border-radius: 15px;
-            font-size: 1.05rem;
-            font-family: inherit;
-            background: rgba(255, 255, 255, 0.9);
-            transition: all 0.3s ease;
-            outline: none;
-            resize: vertical;
-            min-height: 180px;
+            width: 100%; padding: 18px 22px; border: 2px solid #ffb6c1; border-radius: 15px;
+            font-size: 1.05rem; font-family: inherit; background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease; outline: none; resize: vertical; min-height: 180px;
         }
-
-        .form-group textarea:focus {
-            border-color: #ff69b4;
-            box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
-            transform: scale(1.02);
-        }
-
+        .form-group textarea:focus { border-color: #ff69b4; box-shadow: 0 0 15px rgba(255, 105, 180, 0.3); transform: scale(1.02); }
         .submit-btn {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
-            color: white;
-            border: none;
-            border-radius: 15px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.3);
+            width: 100%; padding: 18px; background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            color: white; border: none; border-radius: 15px; font-size: 1.3rem; font-weight: 600;
+            cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(255, 20, 147, 0.3);
         }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(255, 20, 147, 0.5);
-        }
-
-        .submit-btn:active {
-            transform: translateY(-1px);
-        }
-
-        .success-message {
-            display: none;
-            background: rgba(144, 238, 144, 0.9);
-            color: #2d5016;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            animation: fadeInDown 0.5s ease;
-        }
-
-        .success-message.show {
-            display: block;
-        }
-
-        /* ========== SPECIAL BUTTON SECTION ========== */
-        .special-section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px;
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .special-message {
-            font-size: clamp(1.5rem, 4.5vw, 2.2rem);
-            color: #8b4789;
-            margin-bottom: 50px;
-            line-height: 1.7;
-            max-width: 700px;
-            font-weight: 600;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .button-group {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
+        .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(255, 20, 147, 0.5); }
+        .success-message { display: none; background: rgba(144, 238, 144, 0.9); color: #2d5016;
+            padding: 20px; border-radius: 15px; text-align: center; margin-top: 20px;
+            font-size: 1.2rem; animation: fadeInDown 0.5s ease; }
+        .success-message.show { display: block; }
+        .special-section { min-height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; padding: 50px 20px;
+            position: relative; z-index: 1; text-align: center; }
+        .special-message { font-size: clamp(1.5rem, 4.5vw, 2.2rem); color: #8b4789; margin-bottom: 50px;
+            line-height: 1.7; max-width: 700px; font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
+        .button-group { display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; }
         .special-btn {
-            padding: 25px 50px;
-            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.5rem;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 10px 40px rgba(255, 20, 147, 0.4);
-            transition: all 0.4s ease;
-            animation: pulse 2s infinite;
+            padding: 25px 50px; background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+            color: white; border: none; border-radius: 50px; font-size: 1.5rem; font-weight: 600;
+            cursor: pointer; box-shadow: 0 10px 40px rgba(255, 20, 147, 0.4);
+            transition: all 0.4s ease; animation: pulse 2s infinite;
         }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .special-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 50px rgba(255, 20, 147, 0.6);
-        }
-
-        .no-btn {
-            background: linear-gradient(135deg, #9966cc 0%, #b19cd9 100%);
-            box-shadow: 0 10px 40px rgba(153, 102, 204, 0.4);
-        }
-
-        .no-btn:hover {
-            box-shadow: 0 15px 50px rgba(153, 102, 204, 0.6);
-        }
-
-        /* ========== MODAL ========== */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal.show {
-            display: flex;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .special-btn:hover { transform: scale(1.1); box-shadow: 0 15px 50px rgba(255, 20, 147, 0.6); }
+        .no-btn { background: linear-gradient(135deg, #9966cc 0%, #b19cd9 100%);
+            box-shadow: 0 10px 40px rgba(153, 102, 204, 0.4); }
+        .no-btn:hover { box-shadow: 0 15px 50px rgba(153, 102, 204, 0.6); }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000; }
+        .modal.show { display: flex; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         .modal-content {
             background: linear-gradient(135deg, #fff0f6 0%, #ffeef8 100%);
-            padding: 50px 40px;
-            border-radius: 30px;
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.5);
-            position: relative;
+            padding: 50px 40px; border-radius: 30px; text-align: center; max-width: 500px;
+            width: 90%; box-shadow: 0 20px 60px rgba(255, 105, 180, 0.5); position: relative;
             animation: scaleIn 0.4s ease;
         }
-
-        @keyframes scaleIn {
-            from {
-                transform: scale(0.7);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .modal-content h2 {
-            font-size: 2.5rem;
-            color: #ff1493;
-            margin-bottom: 20px;
-        }
-
-        .modal-content p {
-            font-size: 1.3rem;
-            color: #8b4789;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 2rem;
-            color: #ff1493;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .close-modal:hover {
-            transform: rotate(90deg);
-        }
-
-        /* ========== MUSIC PLAYER ========== */
-        .music-player {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 100;
-        }
-
-        .music-btn {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
-            border: none;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .music-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 30px rgba(255, 20, 147, 0.6);
-        }
-
-        /* ========== RESPONSIVE ========== */
+        @keyframes scaleIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .modal-content h2 { font-size: 2.5rem; color: #ff1493; margin-bottom: 20px; }
+        .modal-content p { font-size: 1.3rem; color: #8b4789; line-height: 1.6; margin: 10px 0; }
+        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 2rem; color: #ff1493;
+            cursor: pointer; transition: transform 0.3s ease; }
+        .close-modal:hover { transform: rotate(90deg); }
+        .music-player { position: fixed; bottom: 30px; right: 30px; z-index: 100; }
+        .music-btn { width: 60px; height: 60px; background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+            border: none; border-radius: 50%; color: white; font-size: 1.5rem; cursor: pointer;
+            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.4); transition: all 0.3s ease; }
+        .music-btn:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(255, 20, 147, 0.6); }
+        .notification-form { display: none; }
         @media (max-width: 768px) {
-            .form-container {
-                padding: 40px 25px;
-            }
-
-            .memory-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .photo-container {
-                height: 300px;
-            }
-
-            .button-group {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .special-btn {
-                width: 100%;
-                max-width: 350px;
-            }
+            .form-container { padding: 40px 25px; }
+            .memory-cards { grid-template-columns: 1fr; }
+            .photo-container { height: 300px; }
+            .button-group { flex-direction: column; width: 100%; }
+            .special-btn { width: 100%; max-width: 350px; }
         }
-
         @media (max-width: 480px) {
-            .hero-section h1 {
-                font-size: 2rem;
-            }
-
-            .modal-content {
-                padding: 40px 25px;
-            }
-
-            .special-btn {
-                padding: 20px 35px;
-                font-size: 1.2rem;
-            }
+            .hero-section h1 { font-size: 2rem; }
+            .modal-content { padding: 40px 25px; }
+            .special-btn { padding: 20px 35px; font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- FLOATING HEARTS BACKGROUND -->
     <div class="hearts-container" id="heartsContainer"></div>
 
-    <!-- HERO SECTION -->
     <section class="hero-section">
         <h1>Hey Prachi ❤️</h1>
-        <div class="subtext">
-            <span class="typing-text">I know you're upset… but I miss you a lot 🥺</span>
-        </div>
+        <div class="subtext"><span class="typing-text">I know you're upset… but I miss you a lot 🥺</span></div>
     </section>
 
-    <!-- PHOTO SECTION -->
     <section class="photo-section">
         <div class="photo-card">
             <div class="photo-container">
-                <!-- Replace the emoji with: <img src="your-photo.jpg" alt="Prachi"> -->
+                <!-- Replace with: <img src="prachi-photo.jpg" alt="Prachi"> -->
                 📸
             </div>
             <p class="photo-caption">My favorite person ❤️</p>
         </div>
     </section>
 
-    <!-- MEMORY SECTION -->
     <section class="memory-section">
         <h2 class="section-title">Things I Want You To Know 💭</h2>
         <div class="memory-cards">
-            <div class="memory-card">
-                I really miss you
-            </div>
-            <div class="memory-card">
-                Those days meant everything to me
-            </div>
-            <div class="memory-card">
-                You are my safe place
-            </div>
-            <div class="memory-card">
-                Please talk to me once
-            </div>
-            <div class="memory-card">
-                You make my world brighter
-            </div>
-            <div class="memory-card">
-                I'm truly sorry for hurting you
-            </div>
+            <div class="memory-card">I really miss you</div>
+            <div class="memory-card">Those days meant everything to me</div>
+            <div class="memory-card">You are my safe place</div>
+            <div class="memory-card">Please talk to me once</div>
+            <div class="memory-card">You make my world brighter</div>
+            <div class="memory-card">I'm truly sorry for hurting you</div>
         </div>
     </section>
 
-    <!-- MESSAGE FORM SECTION -->
     <section class="form-section">
         <div class="form-container">
             <h2>Send Me a Message 💌</h2>
             <p class="form-subtitle">Apne dil ki baat yahan likho...</p>
             <form id="messageForm" action="https://formspree.io/f/mvzdzaev" method="POST">
                 <input type="hidden" name="from" value="Prachi">
-                <input type="hidden" name="action" value="Message Sent" id="actionType">
+                <input type="hidden" name="action" value="Message Sent" id="formAction">
                 <div class="form-group">
                     <label for="message">Your Message 💭</label>
                     <textarea id="message" name="message" placeholder="Jo bhi kehna ho... write here ❤️" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message 💌</button>
             </form>
-            <div class="success-message" id="successMessage">
-                Your message reached me ❤️
-            </div>
+            <div class="success-message" id="successMessage">Your message reached me ❤️</div>
         </div>
     </section>
 
-    <!-- SPECIAL BUTTON SECTION -->
     <section class="special-section">
         <div class="special-message">
             Mujhe maaf karogi... ek mauka dogi...<br>
@@ -627,7 +216,6 @@
         </div>
     </section>
 
-    <!-- MODAL FOR YES -->
     <div class="modal" id="yesModal">
         <div class="modal-content">
             <span class="close-modal" id="closeYesModal">&times;</span>
@@ -638,7 +226,6 @@
         </div>
     </div>
 
-    <!-- MODAL FOR NO -->
     <div class="modal" id="noModal">
         <div class="modal-content">
             <span class="close-modal" id="closeNoModal">&times;</span>
@@ -649,23 +236,25 @@
         </div>
     </div>
 
-    <!-- MUSIC PLAYER -->
+    <form id="notificationForm" class="notification-form" action="https://formspree.io/f/mvzdzaev" method="POST">
+        <input type="hidden" name="from" value="Prachi">
+        <input type="hidden" name="action" id="notifyAction">
+        <input type="hidden" name="message" id="notifyMessage">
+        <input type="hidden" name="timestamp" id="notifyTime">
+    </form>
+
     <div class="music-player">
         <button class="music-btn" id="musicBtn">🎵</button>
         <audio id="bgMusic" loop>
-            <!-- Add your music: <source src="romantic-song.mp3" type="audio/mpeg"> -->
+            <!-- <source src="romantic-song.mp3" type="audio/mpeg"> -->
         </audio>
     </div>
 
-    <!-- JAVASCRIPT -->
     <script>
-        // ========== FORMSPREE FORM ID - REPLACE THIS ========== 
-        const FORMSPREE_ID = 'https://formspree.io/f/mvzdzaev'; // Replace with your actual Formspree ID
-
-        // ========== FLOATING HEARTS ========== 
+        const FORMSPREE_ID = 'mvzdzaev';
+        
         const heartsContainer = document.getElementById('heartsContainer');
         const heartEmojis = ['❤️', '💕', '💖', '💗', '💝', '💓'];
-
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -674,77 +263,37 @@
             heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
             heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
             heartsContainer.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 10000);
+            setTimeout(() => heart.remove(), 10000);
         }
-
         setInterval(createHeart, 500);
 
-        // ========== MEMORY CARDS ANIMATION ========== 
         const memoryCards = document.querySelectorAll('.memory-card');
-        
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 200);
-                }
+                if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), index * 200);
             });
-        }, observerOptions);
-
+        }, { threshold: 0.2, rootMargin: '0px 0px -100px 0px' });
         memoryCards.forEach(card => observer.observe(card));
 
-        // ========== SEND NOTIFICATION FUNCTION ========== 
-        function sendNotification(action, message = '') {
-            const formData = {
-                from: 'Prachi',
-                action: action,
-                message: message || 'No message',
-                timestamp: new Date().toLocaleString('hi-IN', { 
-                    timeZone: 'Asia/Kolkata',
-                    dateStyle: 'full',
-                    timeStyle: 'long'
-                })
-            };
-
-            fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            }).then(response => {
-                console.log('Notification sent!', response.status);
-            }).catch(error => {
-                console.log('Error:', error);
-            });
-        }
-
-        // ========== FORM SUBMISSION ========== 
         const messageForm = document.getElementById('messageForm');
         const successMessage = document.getElementById('successMessage');
-
         messageForm.addEventListener('submit', function(e) {
-            // Form will automatically submit to Formspree
-            // Show success message
             setTimeout(() => {
                 successMessage.classList.add('show');
                 messageForm.reset();
-                setTimeout(() => {
-                    successMessage.classList.remove('show');
-                }, 5000);
+                setTimeout(() => successMessage.classList.remove('show'), 5000);
             }, 500);
         });
 
-        // ========== YES/NO BUTTONS ========== 
+        function sendNotification(action, message = '') {
+            document.getElementById('notifyAction').value = action;
+            document.getElementById('notifyMessage').value = message;
+            document.getElementById('notifyTime').value = new Date().toLocaleString('hi-IN', {
+                timeZone: 'Asia/Kolkata', dateStyle: 'full', timeStyle: 'long'
+            });
+            document.getElementById('notificationForm').submit();
+        }
+
         const yesBtn = document.getElementById('yesBtn');
         const noBtn = document.getElementById('noBtn');
         const yesModal = document.getElementById('yesModal');
@@ -752,113 +301,51 @@
         const closeYesModal = document.getElementById('closeYesModal');
         const closeNoModal = document.getElementById('closeNoModal');
 
-        // YES Button - Send notification + show modal
         yesBtn.addEventListener('click', () => {
             yesModal.classList.add('show');
             createMegaHeartBurst();
-            
-            // Send notification
-            sendNotification('✅ YES CLICKED - Prachi ne MAAF KAR DIYA! ❤️', 'Prachi clicked "Haan, Maaf Kiya" button!');
+            sendNotification('✅ YES CLICKED - Prachi ne MAAF KAR DIYA! ❤️', 'Prachi clicked "Haan, Maaf Kiya" button! 🎉');
         });
 
-        // NO Button - Send notification + show modal
         noBtn.addEventListener('click', () => {
             noModal.classList.add('show');
-            
-            // Send notification
             sendNotification('❌ NO CLICKED - Prachi abhi bhi naraz hai 😔', 'Prachi clicked "Abhi Nahi" button.');
         });
 
-        // Close Modals
-        closeYesModal.addEventListener('click', () => {
-            yesModal.classList.remove('show');
-        });
+        closeYesModal.addEventListener('click', () => yesModal.classList.remove('show'));
+        closeNoModal.addEventListener('click', () => noModal.classList.remove('show'));
 
-        closeNoModal.addEventListener('click', () => {
-            noModal.classList.remove('show');
-        });
+        yesModal.addEventListener('click', (e) => { if (e.target === yesModal) yesModal.classList.remove('show'); });
+        noModal.addEventListener('click', (e) => { if (e.target === noModal) noModal.classList.remove('show'); });
 
-        yesModal.addEventListener('click', (e) => {
-            if (e.target === yesModal) {
-                yesModal.classList.remove('show');
-            }
-        });
-
-        noModal.addEventListener('click', (e) => {
-            if (e.target === noModal) {
-                noModal.classList.remove('show');
-            }
-        });
-
-        // ========== MEGA HEART BURST ========== 
         function createMegaHeartBurst() {
             const burstEmojis = ['❤️', '💕', '💖', '💗', '💝', '💓', '💘', '💞'];
-            
             for (let i = 0; i < 50; i++) {
                 setTimeout(() => {
                     const heart = document.createElement('div');
                     heart.textContent = burstEmojis[Math.floor(Math.random() * burstEmojis.length)];
-                    heart.style.position = 'fixed';
-                    heart.style.left = '50%';
-                    heart.style.top = '50%';
-                    heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
-                    heart.style.pointerEvents = 'none';
-                    heart.style.zIndex = '9999';
-                    
+                    heart.style.cssText = 'position:fixed;left:50%;top:50%;pointer-events:none;z-index:9999;';
                     const angle = (Math.PI * 2 * i) / 50;
-                    const velocity = 100 + Math.random() * 150;
-                    
                     document.body.appendChild(heart);
-                    
                     let pos = 0;
-                    const animation = setInterval(() => {
+                    const anim = setInterval(() => {
                         pos += 6;
                         const x = Math.cos(angle) * pos * 2.5;
                         const y = Math.sin(angle) * pos * 2.5;
-                        const rotation = pos * 4;
-                        heart.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg) scale(${1 - pos / 100})`;
-                        heart.style.opacity = 1 - pos / 100;
-                        
-                        if (pos >= 100) {
-                            clearInterval(animation);
-                            heart.remove();
-                        }
+                        heart.style.transform = `translate(${x}px, ${y}px) scale(${1 - pos/100})`;
+                        heart.style.opacity = 1 - pos/100;
+                        if (pos >= 100) { clearInterval(anim); heart.remove(); }
                     }, 20);
                 }, i * 30);
             }
         }
 
-        // ========== MUSIC PLAYER ========== 
         const musicBtn = document.getElementById('musicBtn');
         const bgMusic = document.getElementById('bgMusic');
         let isPlaying = false;
-
         musicBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                bgMusic.pause();
-                musicBtn.textContent = '🎵';
-                isPlaying = false;
-            } else {
-                bgMusic.play().catch(e => {
-                    console.log('Please add a music file');
-                });
-                musicBtn.textContent = '🎶';
-                isPlaying = true;
-            }
-        });
-
-        // ========== SMOOTH SCROLL ========== 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+            if (isPlaying) { bgMusic.pause(); musicBtn.textContent = '🎵'; isPlaying = false; }
+            else { bgMusic.play().catch(e => console.log('Add music')); musicBtn.textContent = '🎶'; isPlaying = true; }
         });
     </script>
 

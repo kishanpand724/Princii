@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Prachi ❤️</title>
+    <title>Meri Prachi ❤️</title>
     <style>
         /* ========== GLOBAL STYLES ========== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -146,7 +146,7 @@
         @media (max-width: 768px) {
             .form-container { padding: 40px 25px; }
             .memory-cards { grid-template-columns: 1fr; }
-            .photo-container { height: 300px; }
+            .photo-container { height: 493px; }
             .button-group { flex-direction: column; width: 100%; }
             .special-btn { width: 100%; max-width: 350px; }
         }
@@ -162,8 +162,9 @@
     <div class="hearts-container" id="heartsContainer"></div>
 
     <section class="hero-section">
-        <h1>Hey Prachi ❤️</h1>
-        <div class="subtext"><span class="typing-text">I know you're upset… but I miss you a lot 🥺</span></div>
+        <h1>Prachi ❤️</h1>
+        <div class="subtext"><span class="typing-text">mujhe nahi pata aap mujhse kitni naraz ho…
+par main aaj bhi wahi hu, jis par aap kabhi bahut vishwas karti thi 💖</span></div>
     </section>
 
     <section class="photo-section">
@@ -172,26 +173,26 @@
                 <img src="mee.png" alt="Prachi">
                
             </div>
-            <p class="photo-caption">My favorite person ❤️</p>
+            <p class="photo-caption">Mere life ki sabse khaas insaan❤️...</p>
         </div>
     </section>
 
     <section class="memory-section">
-        <h2 class="section-title">Things I Want You To Know 💭</h2>
+        <h2 class="section-title">kuch batana chahta hu💭</h2>
         <div class="memory-cards">
-            <div class="memory-card">I really miss you</div>
-            <div class="memory-card">Those days meant everything to me</div>
-            <div class="memory-card">You are my safe place</div>
-            <div class="memory-card">Please talk to me once</div>
-            <div class="memory-card">You make my world brighter</div>
-            <div class="memory-card">I'm truly sorry for hurting you</div>
+            <div class="memory-card">Bahut yaad aati h aapki</div>
+            <div class="memory-card">Yaad h aapko vo gaon me bitaye din</div>
+            <div class="memory-card">Aap kitna safe feel krti thi mere saath</div>
+            <div class="memory-card">Ek baar mujhse thoda sa baat krlo</div>
+            <div class="memory-card">Aapse baat krke mai bahut khush ho jata hu</div>
+            <div class="memory-card">Mujhe maaf kr do... Aap jo kahogi vahi krunga</div>
         </div>
     </section>
 
     <section class="form-section">
         <div class="form-container">
             <h2>Send Me a Message 💌</h2>
-            <p class="form-subtitle">Apne dil ki baat yahan likho...</p>
+            <p class="form-subtitle">Kuch bolna h mujhe toh yaha bhi likh sakti ho aap...</p>
             <form id="messageForm" action="https://formspree.io/f/mvzdzaev" method="POST">
                 <input type="hidden" name="from" value="Prachi">
                 <input type="hidden" name="action" value="Message Sent" id="formAction">
@@ -219,20 +220,21 @@
     <div class="modal" id="yesModal">
         <div class="modal-content">
             <span class="close-modal" id="closeYesModal">&times;</span>
-            <h2>Thank You So Much! 💖</h2>
-            <p>Main hamesha tumhara wait karunga ✨</p>
-            <p>Tum mere liye bahut special ho 💕</p>
-            <p>I Love You Prachi! ❤️</p>
+            <h2>Thank uhhh Prachi(Meri Princi)! 💖</h2>
+            <p>✨</p>
+            <p>mai janta tha aap mujhse gussa ni hogi kabhi💕</p>
+            <p>Aap fikar mat kro aapka kabhi dil ni dukhaunga,saari baatein manuga...❤️</p>
         </div>
     </div>
 
     <div class="modal" id="noModal">
         <div class="modal-content">
             <span class="close-modal" id="closeNoModal">&times;</span>
-            <h2>Koi Baat Nahi... 💔</h2>
-            <p>Main hamesha tumhara wait karunga 💖</p>
-            <p>Jab tumhara mann ho, tab baat kar lena 🥺</p>
-            <p>Main yahi rahunga... tumhare liye ✨</p>
+            <h2>💔🥺</h2>
+            <p>Koi baat ni, mai intzaar kr raha hu💖</p>
+            <p>Jab aapka dil kare, tab baat kar lena 🥺</p>
+            <p>Main yahi rahunga... hamesha ✨</p>
+            <p>Kabhi aapko chhor kr ni jaaunga💖💖</p>
         </div>
     </div>
 
@@ -254,7 +256,7 @@
         const FORMSPREE_ID = 'mvzdzaev';
         
         const heartsContainer = document.getElementById('heartsContainer');
-        const heartEmojis = ['❤️', '💕', '💖', '💗', '💝', '💓'];
+        const heartEmojis = ['❤️', '💕', '💖', '💗', '💝', '💓',"Prachi","Kishan"];
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -319,7 +321,7 @@
         noModal.addEventListener('click', (e) => { if (e.target === noModal) noModal.classList.remove('show'); });
 
         function createMegaHeartBurst() {
-            const burstEmojis = ['❤️', '💕', '💖', '💗', '💝', '💓', '💘', '💞'];
+            const burstEmojis = ['❤️', '💕', '💖', '💗', '💝', '💓', '💘', '💞',"Prachi","Kishan"];
             for (let i = 0; i < 50; i++) {
                 setTimeout(() => {
                     const heart = document.createElement('div');
